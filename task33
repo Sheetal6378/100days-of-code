@@ -1,1 +1,24 @@
+class MedianFinder {
+    List<Integer> list;
+    public MedianFinder() {
+        list = new ArrayList<>();
+    }
 
+    public void addNum(int num) {
+        list.add(num);
+    }
+
+    public double findMedian() {
+        Collections.sort(list);
+        int n = list.size();
+
+        if (n % 2 == 1) { 
+            return (double) list.get(n / 2);
+        }
+
+        double median = list.get(n / 2) + list.get(n / 2 - 1);
+        return median / 2;
+    }
+}
+
+// TC: O(k * n * logn), SC: O(n)
