@@ -1,3 +1,4 @@
+Given an encoded string, return its decoded string.
 class Solution {
     public String decodeString(String s) {
         Stack<Integer> is = new Stack<>();
